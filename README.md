@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="./desktop-screenshot.png" width="48">
-<img src="./mobile-screenshot.png" width="48">
+<img src="./desktop-screenshot.png" width="480">
+<img src="./mobile-screenshot.png" width="240">
 
 ### Links
 
