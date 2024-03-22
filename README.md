@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop](./desktop-screenshot.png)
-![Mobile](./mobile-screenshot.png)
+<img src="./desktop-screenshot.png" width="48">
+<img src="./mobile-screenshot.png" width="48">
 
 ### Links
 
