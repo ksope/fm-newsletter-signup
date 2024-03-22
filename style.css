@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/***************Global Styling Guide********************/
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: hsl(0, 0%, 100%);
+    --grey-color: hsl(231, 7%, 60%);
+    --charcoal-grey-color: hsl(235, 18%, 26%);
+    --dark-slate-grey-color: hsl(234, 29%, 20%);
+    --light-slate-grey-color: hsl(234, 29%, 30%);
+    --error-color: hsl(4, 100%, 67%);
+    --light-error-color: hsl(4, 100%, 90%);
+    --success-color: #2ecc71;
+    --font-size-small: 0.6rem;
+    --font-size-medium: 0.85rem;
+    --font-size-normal: 1rem;
+    --font-size-large: 3rem;
+    --outer-radius: 1.5em;
+    --box-padding: 1em;
+    --confirm-box-padding: 2.8em;
+    --inner-radius: calc(var(--outer-radius)-var(--box-padding));
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--charcoal-grey-color);
+}
+
+input,
+label {
+    display: block;
+}
+
+h1 {
+    font-size: var(--font-size-large);
+    font-weight: 700;
+}
+
+.btn {
+    width: 100%;
+    height: 42px;
+    margin: 9px 9px 9px 0;
+    border-radius: 6px;
+}
+
+/*******************Conttainer elements***********************/
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto 0;
+    width: 70%;
+    max-width: 847px;
+    min-width: 800px;
+    background-color: var(--white-color);
+    padding: var(--box-padding);
+    border-radius: var(--outer-radius);
+}
+
+p,
+span {
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+}
+
+/*******************Update Content Elements**************************/
+
+.update-container {
+    padding: 36px;
+    text-align: left;
+}
+
+.updates ul {
+    list-style-type: none;
+}
+
+#subscribe {
+    color: var(--white-color);
+    background-color: var(--dark-slate-grey-color);
+    font-size: var(--font-size-medium);
+    cursor: pointer;
+}
+
+#subscribe:hover,
+a.button:hover {
+    background-color: var(--light-slate-grey-color);
+    border-color: var(--light-slate-grey-color);
+}
+
+.form-control input {
+    border: 2px solid var(--grey-color);
+}
+
+#email {
+    font-size: var(--font-size-small);
+}
+
+#email-btn {
+    margin-top: 3px;
+    padding: 20px;
+}
+
+#email-btn:hover {
+    border-color: var(--dark-slate-grey-color);
+}
+
+#email-btn:focus {
+    border-color: var(--dark-slate-grey-color);
+    background-color: honeydew;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.update-item {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.icon-list {
+    height: 1rem;
+    width: 1rem;
+    vertical-align: middle;
+}
+
+span.text {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/*****************Error Message Handling******************/
+
+.form-control {
+    position: relative;
+}
+
+.form-control.error input {
+    border: 2px solid var(--error-color);
+    background-color: var(--light-error-color);
+    color: var(--error-color);
+}
+
+.form-control.success input {
+    border-color: var(--success-color);
+}
+
+.form-control small {
+    color: var(--error-color);
+    font-size: var(--font-size-small);
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+/*******************8attribution************************/
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--white-color);
+    margin-top: 10px;
+}
+
+.attribution a {
+    color: var(--white-color);
+}
+
+/*************Confirmation Page*********************/
+
+.confirm-container {
+    margin: 100px auto 0;
+    width: 30%;
+    min-width: 400px;
+    max-width: 423px;
+    background-color: var(--white-color);
+    padding: var(--confirm-box-padding);
+    border-radius: var(--outer-radius);
+}
+
+a.button {
+    display: inline-block;
+    color: var(--white-color);
+    background-color: var(--dark-slate-grey-color);
+    font-size: var(--font-size-medium);
+    padding: 13px;
+    width: 100%;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p#confirm-text {
+    font-size: var(--font-size-medium);
+}
+
+span#contact {
+    font-style: bold;
+    font-weight: 700;
+}
+
+/*****************MEDIA QUERIES (PHONES)*********************/
+@media screen and (max-width: 375px) {
+    .container {
+        margin: 0;
+        padding: 0;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        width: 100%;
+        background-color: var(--white-color);
+        padding: var(--box-padding);
+        border-radius: var(--outer-radius);
+    }
+    .update-container {
+        padding: 12px;
+    }
+
+    .img-container {
+        width: 100%;
+    }
+
+    .img-container #image {
+        width: 100%;
+        object-fit: contain;
+    }
+}

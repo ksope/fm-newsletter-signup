@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="./style.css" />
+
+        <title>
+            Frontend Mentor | Newsletter sign-up form with success message
+        </title>
+    </head>
+    <body>
+        <!-- Success message start -->
+
+        <div class="confirm-container">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+            >
+                <defs>
+                    <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                        <stop offset="0%" stop-color="#FF6A3A" />
+                        <stop offset="100%" stop-color="#FF527B" />
+                    </linearGradient>
+                </defs>
+                <g fill="none">
+                    <circle cx="32" cy="32" r="32" fill="url(#a)" />
+                    <path
+                        stroke="#FFF"
+                        stroke-width="4"
+                        d="m18.286 34.686 8.334 7.98 19.094-18.285"
+                    />
+                </g>
+            </svg>
+
+            <div class="success-msg">
+                <h1 id="confirm-heading">Thanks for subscribing!</h1>
+
+                <p id="confirm-text">
+                    A confirmation email has been sent to
+                    <span id="contact">ash@loremcompany.com</span>. Please open
+                    it and click the button inside to confirm your subscription.
+                </p>
+            </div>
+            <div id="dismissBtn">
+                <a href="./index.html" class="button">Dismiss message</a>
+            </div>
+        </div>
+
+        <!-- Success message end -->
+
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="#">Sope Ketiku</a>.
+        </div>
+        <script>
+            // Retrieve email from localStorage
+            const storedValue = localStorage.getItem("userInputValue");
+
+            // Display the email
+            if (storedValue) {
+                document.getElementById("contact").innerText = storedValue;
+            } else {
+                document.getElementById("contact").innerText =
+                    "No email found.";
+            }
+        </script>
+    </body>
+</html>
