@@ -33,12 +33,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop](./desktop-screenshot.png)
+![Mobile](./mobile-screenshot.png)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://github.com/ksope/fm-newsletter-signup)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -49,33 +50,46 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-- [Styled Components](https://styled-components.com/) - For styles
+- JavaScript
 
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learnt how to save data n the browser's localStorage and retrieve it. 
 
 To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+```javascript
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (email.value === "") {
+        showError(email, "Valid email required");
+    } else if (!checkEmail(email)) {
+        showError(email, "Email is not valid");
+    } else {
+        const inputValue = email.value;
+        localStorage.setItem("userInputValue", inputValue); // Store the value in local storage
+        showSuccess(email, "./confirmation.html");
+    }
+});
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+
+```javascript
+const storedValue = localStorage.getItem("userInputValue");
+
+            // Display the email
+            if (storedValue) {
+                document.getElementById("contact").innerText = storedValue;
+            } else {
+                document.getElementById("contact").innerText =
+                    "No email found.";
+            }
 ```
 
 
 ### Continued development
 
-Unit testing using jest.
+Unit testing using jest. I intend to implement this feature later.
 
 ### Useful resources
 

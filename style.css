@@ -215,9 +215,9 @@ span#contact {
     .container {
         margin: 0;
         padding: 0;
+        min-width: 359px;
         flex-direction: column-reverse;
         justify-content: space-between;
-        width: 100%;
         background-color: var(--white-color);
         padding: var(--box-padding);
         border-radius: var(--outer-radius);
